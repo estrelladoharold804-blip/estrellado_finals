@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NIEK STORE</title>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.Logo { font-size: 28px; font-weight: bold; letter-spacing: 2px; }
+.nav-links a {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: #ff9900; }
+
+/* PAGE SECTIONS */
+.page { display: none; padding-top: 100px; }
+
+/* GALLERY */
+.gallery {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+}
+.img-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    padding-bottom: 15px;
+    transition: 0.3s;
+}
+.img-card:hover { transform: translateY(-5px); }
+.img-card img { width: 100%; height: 220px; object-fit: cover; }
+.img-card p { padding: 10px; font-weight: bold; }
+
+/* BUTTONS */
+.img-card button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    background: #111;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.img-card button:hover { background: #ff9900; }
+
+/* LOGIN + REGISTER */
+.form-box {
+    width: 330px;
+    margin: 120px auto;
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+}
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ff9900;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-box button:hover { background: #ffaa33; }
+.switch { color:#ff9900; cursor:pointer; margin-top:10px; display:block; }
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background: #111;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+.footer h2, .footer p { transition: 0.3s; }
+.footer h2:hover, .footer p:hover { color: #ff9900; cursor: pointer; }
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="Logo">NIEK</div>
+    <nav class="nav-links">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('login')">Login</a>
+        <a onclick="showPage('register')">Register</a>
+    </nav>
+</header>
+
+<!-- HOME PAGE (YOUR GALLERY) -->
+<div id="home" class="page" style="display:block;">
+
+    <div class="gallery">
+
+        <!-- YOUR FULL GALLERY EXACTLY AS YOU PROVIDED IT -->
+        <div class="img-card">
+            <img src="shoe1.jpg.jfif" alt="">
+            <p>Luka 4 PF "Gone Ranching" (White)</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe2.jpg.jfif" alt="">
+            <p>Giannis Freak 7 "Shapeshift" EP</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe3.jpg.jfif" alt="">
+            <p>Zion 4 PF "Iridescence"</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe4.jpg.jfif" alt="">
+            <p>Nike LeBron XXI "Prime 93" EP</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe5.jpg.jfif" alt="">
+            <p>Luka .77 PF "Gone Camping"</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe6.jpg.jfif" alt="">
+            <p>Luka 4 PF</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe7.jpg.jfif" alt="">
+            <p>KD 18 EYBL EP</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe8.jpg.jfif" alt="">
+            <p>Kobe 3 Protro</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe9.jpg.jfif" alt="">
+            <p>Giannis Freak EP</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe10.jpg.jfif" alt="">
+            <p>Precision 7 (Pink)</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe11.jpg.jfif" alt="">
+            <p>Air Jordan MVP 92</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe12.jpg.jfif" alt="">
+            <p>KD 18 "Chain Reaction" EP</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe13.jpg.jfif" alt="">
+            <p>Air Jordan 1 High OG "Shattered Backboard"</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe14.jpg.jfif" alt="">
+            <p>Jordan Courtside 23</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe15.jpg.jfif" alt="">
+            <p>Nike S.T. Flare EP</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe16.jpg.jfif" alt="">
+            <p>Air Jordan 40 Edge PF</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe17.jpg.jfif" alt="">
+            <p>A'One "Dynasty"</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe18.jpg.jfif" alt="">
+            <p>Jordan Heir Series PF "Mother's Day"</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe19.jpg.jfif" alt="">
+            <p>Jordan Heir Series PF "Black and White"</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+        <div class="img-card">
+            <img src="shoe20.jpg.jfif" alt="">
+            <p>Air Jordan 40 PF "The Classic"</p>
+            <button>Purchase</button> <button>Add to cart</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- LOGIN PAGE -->
+<div id="login" class="page">
+    <div class="form-box">
+        <h2>Login</h2>
+        <input type="text" id="loginUser" placeholder="Enter Username">
+        <input type="password" id="loginPass" placeholder="Enter Password">
+        <button onclick="loginUser()">Login</button>
+        <span class="switch" onclick="showPage('register')">No account? Register</span>
+        <p id="msgLogin"></p>
+    </div>
+</div>
+
+<!-- REGISTER PAGE -->
+<div id="register" class="page">
+    <div class="form-box">
+        <h2>Register</h2>
+        <input type="text" id="regUser" placeholder="Create Username">
+        <input type="password" id="regPass" placeholder="Create Password">
+        <button onclick="registerUser()">Register</button>
+        <span class="switch" onclick="showPage('login')">Already have an account? Login</span>
+        <p id="msgReg"></p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <h2>About</h2>
+    <p>Affordable basketball shoes with high quality.</p>
+    <h2>Contact</h2>
+    <p>Email: NIEKSHOESTORE@gmail.com</p>
+    <p>Phone: 09984673891</p>
+</div>
+
+<script>
+/* Page Switcher */
+function showPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.style.display = "none");
+    document.getElementById(page).style.display = "block";
+}
+
+/* Register */
+function registerUser() {
+    let user = document.getElementById("regUser").value;
+    let pass = document.getElementById("regPass").value;
+    let msg = document.getElementById("msgReg");
+
+    if (!user || !pass) {
+        msg.style.color = "red";
+        msg.textContent = "All fields are required.";
+        return;
+    }
+
+    localStorage.setItem("username", user);
+    localStorage.setItem("password", pass);
+
+    msg.style.color = "lightgreen";
+    msg.textContent = "Registration successful!";
+}
+
+/* Login */
+function loginUser() {
+    let user = document.getElementById("loginUser").value;
+    let pass = document.getElementById("loginPass").value;
+    let msg = document.getElementById("msgLogin");
+
+    if (user === localStorage.getItem("username") && pass === localStorage.getItem("password")) {
+        msg.style.color = "lightgreen";
+        msg.textContent = "Login successful!";
+        setTimeout(() => showPage('home'), 1000);
+    } else {
+        msg.style.color = "red";
+        msg.textContent = "Incorrect username or password.";
+    }
+}
+</script>
+
+</body>
+</html>

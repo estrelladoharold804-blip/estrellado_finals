@@ -1,0 +1,29 @@
+/* GLOBAL BACKGROUND (Nike-style) */
+body {
+    background: #f5f5f5;   /* Light gray Nike background */
+    color: #111;           /* Nike dark text */
+}
+
+/* NAVBAR */
+.navbar {
+    background: #ffffff;   /* Pure white top bar (Nike uses white headers) */
+    color: #111;
+    border-bottom: 1px solid #e6e6e6; /* subtle Nike divider */
+}
+
+/* GALLERY BACKGROUND */
+.gallery {
+    background: #f5f5f5;  /* Light Nike-style gray */
+}
+
+/* PRODUCT CARDS */
+.img-card {
+    background: #ffffff;   /* White cards (Nike standard) */
+    border: 1px solid #e6e6e6;
+}
+
+/* FOOTER */
+.footer {
+    background: #000000;  /* Nike black footer */
+    color: white;
+}
